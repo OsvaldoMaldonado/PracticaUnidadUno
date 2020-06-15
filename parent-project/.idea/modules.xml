@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Rutas/Rutas.iml" filepath="$PROJECT_DIR$/Rutas/Rutas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQLite/SQLite.iml" filepath="$PROJECT_DIR$/SQLite/SQLite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseDatos/baseDatos.iml" filepath="$PROJECT_DIR$/baseDatos/baseDatos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exepciones/exepciones.iml" filepath="$PROJECT_DIR$/exepciones/exepciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent-project.iml" filepath="$PROJECT_DIR$/parent-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txt/txt.iml" filepath="$PROJECT_DIR$/txt/txt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xlsx/xlsx.iml" filepath="$PROJECT_DIR$/xlsx/xlsx.iml" />
+    </modules>
+  </component>
+</project>
