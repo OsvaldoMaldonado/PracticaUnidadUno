@@ -52,6 +52,10 @@ public class App {
 
 
 
+
+
+
+
     }
     //TLDR.-Recibe la conexion de la B.D temporal, junto con los valores para poder ser insertados y luego se muestran en la consola para asegurar que si estan xd
     //1.- Primero con el string se prepara la sentencia que se usara en la b.d
@@ -85,10 +89,11 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("id_aula")+ "\n"+
-                        rs.getInt("capacidad")+ "\n" +
-                        rs.getString("nombre")+ "\n" +
-                        rs.getString("tipo"));
+                System.out.println("id_aula"+ "   " + "nombre" + "        " + "tipo" + "        " + "capacidad" + "\n" +rs.getString("id_aula")+
+                       "        " + rs.getInt("capacidad")+
+                        "            " +rs.getString("nombre")+
+                       "         "   + rs.getString("tipo")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -113,8 +118,9 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_grupo")+ "\n"+
-                        rs.getBoolean("turno"));
+                System.out.println("clv_grupo" + "   " + "turno" + "\n"+ rs.getString("clv_grupo")+
+                     "          "  +  rs.getBoolean("turno")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -144,14 +150,16 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("nombre_materia")+ "\n"+
-                        rs.getString("clv_materia")+ "\n" +
-                        rs.getInt("creditos")+ "\n" +
-                        rs.getInt("cuatrimestre")+ "\n"+
-                        rs.getInt("posicion")+ "\n" +
-                        rs.getString("clv_plan")+ "\n" +
-                        rs.getInt("horas_x_semana")+ "\n" +
-                        rs.getString("tipo_materia"));
+                System.out.println("nombre_materia"+ "     "+ "clv_materia" + "     " + "creditos" + "     " + "cuatrimestre" + "     " + "posicion" + "      " + "clv_plan" + "      " + "horas_x_semana" + "     " + "tipo_materia"+ "\n"+
+                        rs.getString("nombre_materia")+
+                  "                 " +     rs.getString("clv_materia")+
+                  "             " +     rs.getInt("creditos")+
+                  "           " +     rs.getInt("cuatrimestre")+
+                  "               " +     rs.getInt("posicion")+
+                  "            " +     rs.getString("clv_plan")+
+                  "           " +     rs.getInt("horas_x_semana")+
+                  "                 " +     rs.getString("tipo_materia")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -177,11 +185,13 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_usuario")+ "\n"+
-                        rs.getInt("idcarrera")+ "\n" +
-                        rs.getString("nombre_usuario")+ "\n" +
-                        rs.getString("nivel_ads")+ "\n" +
-                        rs.getString("contrato"));
+                System.out.println("clv_usuario" + "     "+ "idcarrera"+ "     "+ "nombre_usuario"+ "      " + "nivel_ads" + "      " + "contrato"+ "\n"+
+                                rs.getString("clv_usuario")+
+                      "              " + rs.getInt("idcarrera")+
+                      "            " + rs.getString("nombre_usuario")+
+                      "                 " + rs.getString("nivel_ads")+
+                      "            " + rs.getString("contrato")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -205,9 +215,11 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_grupo")+ "\n"+
-                        rs.getString("clv_materia")+ "\n" +
-                        rs.getString("clv_usuario"));
+                System.out.println("clv_grupo" + "     " + "clv_materia" + "      "+ "clv_usuario"+ "\n"+
+                        rs.getString("clv_grupo")+
+                "            " +       rs.getString("clv_materia")+
+                "              " +       rs.getString("clv_usuario")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -231,9 +243,10 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_usuario")+ "\n"+
-                        rs.getString("pass_usuario")+ "\n" +
-                        rs.getString("tipo_usuario"));
+                System.out.println("clv_usuario" + "      " + "pass_usuario" + "      "+ "tipo_usuario" + "\n" +rs.getString("clv_usuario")+
+                "               " +        rs.getString("pass_usuario")+
+                "               " +        rs.getString("tipo_usuario")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -257,9 +270,10 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getInt("dia")+ "\n"+
-                        rs.getInt("espacio_tiempo")+ "\n" +
-                        rs.getString("clv_usuario"));
+                System.out.println("dia" + "      " + "espacio_tiempo" + "      "+ "clv_usuario" + "\n" +rs.getString("dia")+
+                        "       " +        rs.getString("espacio_tiempo")+
+                        "                  " +        rs.getString("clv_usuario")+
+                        "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -281,8 +295,9 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("idcarrera")+ "\n"+
-                        rs.getString("nombre_carrera"));
+                System.out.println("idcarrera" + "   " + "nombre_carrera" + "\n"+ rs.getString("idcarrera")+
+                        "         "  +  rs.getString("nombre_carrera") +
+                "\n");
             }
             return conexion;
             //Se executa el statement para que se agreguen los datos
@@ -306,8 +321,9 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getInt("idcarrera")+ "\n"+
-                        rs.getString("clv_usuarios"));
+                System.out.println("clv_usuarios" + "   " + "idcarrera" + "\n"+ rs.getString("clv_usuarios")+
+                        "             "  +  rs.getString("idcarrera")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -332,10 +348,11 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_plan")+ "\n"+
-                        rs.getInt("idcarrera")+ "\n" +
-                        rs.getString("nombre_plan")+ "\n" +
-                        rs.getString("nivel"));
+                System.out.println("clv_plan"+ "   " + "nombre_plan" + "        " + "nivel" + "        " + "idcarrera" + "\n" +rs.getString("clv_plan")+
+                        "         " + rs.getString("nombre_plan")+
+                        "                " +rs.getString("nivel")+
+                        "          "   + rs.getInt("idcarrera")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -361,11 +378,13 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("clv_materia")+ "\n"+
-                        rs.getInt("puntos_confianza")+ "\n" +
-                        rs.getInt("puntos_director")+ "\n" +
-                        rs.getString("clv_plan")+ "\n" +
-                        rs.getString("clv_usuario"));
+                System.out.println("clv_materia" + "     "+ "clv_plan"+ "     "+ "clv_usuario"+ "      " + "puntos_confianza" + "      " + "puntos_director"+ "\n"+
+                        rs.getString("clv_materia")+
+                        "              " + rs.getString("clv_plan")+
+                        "          " + rs.getString("clv_usuario")+
+                        "              " + rs.getInt("puntos_confianza")+
+                        "                    " + rs.getString("puntos_director")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -392,11 +411,13 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("id_aula")+ "\n"+
-                        rs.getInt("dia")+ "\n" +
-                        rs.getInt("espacio_tiempo")+ "\n" +
-                        rs.getString("clv_grupo")+ "\n" +
-                        rs.getString("clv_materia"));
+                System.out.println("dia" + "     "+ "espacio_tiempo"+ "     "+ "id_aula"+ "      " + "clv_grupo" + "      " + "clv_materia"+ "\n"+
+                        rs.getInt("dia")+
+                        "      " + rs.getInt("espacio_tiempo")+
+                        "                 " + rs.getString("id_aula")+
+                        "           " + rs.getString("clv_grupo")+
+                        "            " + rs.getString("clv_materia")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -420,9 +441,10 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getInt("id_equipo")+ "\n"+
-                        rs.getInt("cantidad")+ "\n" +
-                        rs.getString("id_aula"));
+                System.out.println("id_equipo" + "      " + "id_aula" + "      "+ "cantidad" + "\n" +rs.getInt("id_equipo")+
+                        "             " +        rs.getString("id_aula")+
+                        "           " +        rs.getInt("cantidad")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -447,10 +469,11 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getString("nombre")+ "\n"+
-                        rs.getInt("id_equipo")+ "\n" +
-                        rs.getInt("id_categoria")+ "\n" +
-                        rs.getString("descripcion"));
+                System.out.println("id_equipo"+ "   " + "id_categoria" + "        " + "nombre" + "        " + "descripcion" + "\n" +rs.getInt("id_equipo")+
+                        "          " + rs.getInt("id_categoria")+
+                        "                  " +rs.getString("nombre")+
+                        "            "   + rs.getString("descripcion")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -474,9 +497,10 @@ public class App {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
             while (rs.next()) {
-                System.out.println(rs.getInt("id_categoria")+ "\n"+
-                        rs.getString("nombre")+ "\n" +
-                        rs.getString("descripcion"));
+                System.out.println("id_categoria" + "      " + "nombre" + "      "+ "descripcion" + "\n" +rs.getInt("id_categoria")+
+                        "                " +        rs.getString("nombre")+
+                        "          " +        rs.getString("descripcion")+
+                "\n");
             }
             return conexion;
         } catch (SQLException throwables) {
@@ -1183,14 +1207,16 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("nombre_materia")+ "\n"+
-            rs.getString("clv_materia")+ "\n" +
-            rs.getInt("creditos")+ "\n" +
-            rs.getInt("cuatrimestre")+ "\n"+
-            rs.getInt("posicion")+ "\n" +
-            rs.getString("clv_plan")+ "\n" +
-            rs.getInt("horas_x_semana")+ "\n" +
-            rs.getString("tipo_materia"));
+            System.out.println("nombre_materia"+ "     "+ "clv_materia" + "     " + "creditos" + "     " + "cuatrimestre" + "     " + "posicion" + "      " + "clv_plan" + "      " + "horas_x_semana" + "     " + "tipo_materia"+ "\n"+
+                    rs.getString("nombre_materia")+
+                    "                 " +     rs.getString("clv_materia")+
+                    "             " +     rs.getInt("creditos")+
+                    "           " +     rs.getInt("cuatrimestre")+
+                    "               " +     rs.getInt("posicion")+
+                    "            " +     rs.getString("clv_plan")+
+                    "           " +     rs.getInt("horas_x_semana")+
+                    "                 " +     rs.getString("tipo_materia")+
+                    "\n");
         }
 
     }
@@ -1199,12 +1225,13 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("clv_usuario")+ "\n"+
-                    rs.getInt("idcarrera")+ "\n" +
-                    rs.getInt("cuatrimestre")+ "\n"+
-                    rs.getString("nombre_usuario")+ "\n" +
-                    rs.getString("nivel_ads")+ "\n" +
-                    rs.getString("tipo_contrato"));
+            System.out.println("clv_usuario" + "     "+ "idcarrera"+ "     "+ "nombre_usuario"+ "      " + "nivel_ads" + "      " + "contrato"+ "\n"+
+                    rs.getString("clv_usuario")+
+                    "              " + rs.getInt("idcarrera")+
+                    "            " + rs.getString("nombre_usuario")+
+                    "                 " + rs.getString("nivel_ads")+
+                    "            " + rs.getString("contrato")+
+                    "\n");
         }
     }
     public static void busqueda_grupo_materia_profesor(Connection conexion) throws SQLException{
@@ -1212,9 +1239,11 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("clv_grupo")+ "\n"+
-                    rs.getString("clv_materia")+ "\n" +
-                    rs.getString("clv_usuario"));
+            System.out.println("clv_grupo" + "     " + "clv_materia" + "      "+ "clv_usuario"+ "\n"+
+                    rs.getString("clv_grupo")+
+                    "            " +       rs.getString("clv_materia")+
+                    "              " +       rs.getString("clv_usuario")+
+                    "\n");
         }
     }
     public static void busqueda_login(Connection conexion) throws SQLException{
@@ -1222,9 +1251,10 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("clv_usuario")+ "\n"+
-                    rs.getString("pass_usuario")+ "\n" +
-                    rs.getString("tipo_usuario"));
+            System.out.println("clv_usuario" + "      " + "pass_usuario" + "      "+ "tipo_usuario" + "\n" +rs.getString("clv_usuario")+
+                    "               " +        rs.getString("pass_usuario")+
+                    "               " +        rs.getString("tipo_usuario")+
+                    "\n");
         }
     }
     public static void busqueda_disponibilidad(Connection conexion) throws SQLException{
@@ -1232,9 +1262,10 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getInt("dia")+ "\n"+
-                    rs.getInt("espacio_tiempo")+ "\n" +
-                    rs.getString("clv_usuario"));
+            System.out.println("dia" + "      " + "espacio_tiempo" + "      "+ "clv_usuario" + "\n" +rs.getString("dia")+
+                    "       " +        rs.getString("espacio_tiempo")+
+                    "                  " +        rs.getString("clv_usuario")+
+                    "\n");
         }
     }
     public static void busqueda_carrera(Connection conexion) throws SQLException{
@@ -1242,8 +1273,9 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getInt("idcarrera")+ "\n"+
-                    rs.getString("nombre_carrera"));
+            System.out.println("idcarrera" + "   " + "nombre_carrera" + "\n"+ rs.getString("idcarrera")+
+                    "         "  +  rs.getString("nombre_carrera") +
+                    "\n");
         }
     }
     public static void busqueda_prestamo(Connection conexion) throws SQLException{
@@ -1251,8 +1283,9 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getInt("idcarrera")+ "\n"+
-                    rs.getString("clv_usuario"));
+            System.out.println("clv_usuarios" + "   " + "idcarrera" + "\n"+ rs.getString("clv_usuarios")+
+                    "             "  +  rs.getString("idcarrera")+
+                    "\n");
         }
     }
     public static void busqueda_plan_estudios(Connection conexion) throws SQLException{
@@ -1260,10 +1293,11 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("clv_plan")+ "\n"+
-                    rs.getInt("idcarrera")+ "\n" +
-                    rs.getString("nombre_plan")+ "\n" +
-                    rs.getString("nivel"));
+            System.out.println("clv_plan"+ "   " + "nombre_plan" + "        " + "nivel" + "        " + "idcarrera" + "\n" +rs.getString("clv_plan")+
+                    "         " + rs.getString("nombre_plan")+
+                    "                " +rs.getString("nivel")+
+                    "          "   + rs.getInt("idcarrera")+
+                    "\n");
         }
     }
     public static void busqueda_aulas(Connection conexion) throws SQLException{
@@ -1271,22 +1305,36 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("id_aula")+ "\n"+
-                    rs.getInt("capacidad")+ "\n" +
-                    rs.getString("nombre")+ "\n" +
-                    rs.getString("tipo"));
+            System.out.println("id_aula"+ "   " + "nombre" + "        " + "tipo" + "        " + "capacidad" + "\n" +rs.getString("id_aula")+
+                    "        " + rs.getInt("capacidad")+
+                    "            " +rs.getString("nombre")+
+                    "         "   + rs.getString("tipo")+
+                    "\n");
         }
+    }
+    public static void busqueda_grupo(Connection conexion) throws SQLException{
+            String sql3 = "SELECT clv_grupo,turno FROM grupo";
+            Statement stmt = conexion.createStatement();
+            ResultSet rs = stmt.executeQuery(sql3);
+            while (rs.next()) {
+                System.out.println("clv_grupo" + "   " + "turno" + "\n"+ rs.getString("clv_grupo")+
+                        "          "  +  rs.getBoolean("turno")+
+                        "\n");
+            }
+
     }
     public static void busqueda_materia_usuario(Connection conexion) throws SQLException{
         String sql3 =  "SELECT clv_materia,clv_plan,clv_usuario,puntos_confianza,puntos_director FROM materia_usuario";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("clv_materia")+ "\n"+
-                    rs.getInt("puntos_confianza")+ "\n" +
-                    rs.getInt("puntos_director")+ "\n" +
-                    rs.getString("clv_plan")+ "\n" +
-                    rs.getString("clv_usuario"));
+            System.out.println("clv_materia" + "     "+ "clv_plan"+ "     "+ "clv_usuario"+ "      " + "puntos_confianza" + "      " + "puntos_director"+ "\n"+
+                    rs.getString("clv_materia")+
+                    "              " + rs.getString("clv_plan")+
+                    "          " + rs.getString("clv_usuario")+
+                    "              " + rs.getInt("puntos_confianza")+
+                    "                    " + rs.getString("puntos_director")+
+                    "\n");
         }
     }
     public static void uso_aula_grupo(Connection conexion) throws SQLException{
@@ -1294,11 +1342,13 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("id_aula")+ "\n"+
-                    rs.getInt("dia")+ "\n" +
-                    rs.getInt("espacio_tiempo")+ "\n" +
-                    rs.getString("clv_grupo")+ "\n" +
-                    rs.getString("clv_materia"));
+            System.out.println("dia" + "     "+ "espacio_tiempo"+ "     "+ "id_aula"+ "      " + "clv_grupo" + "      " + "clv_materia"+ "\n"+
+                    rs.getInt("dia")+
+                    "      " + rs.getInt("espacio_tiempo")+
+                    "                 " + rs.getString("id_aula")+
+                    "           " + rs.getString("clv_grupo")+
+                    "            " + rs.getString("clv_materia")+
+                    "\n");
         }
     }
     public static void busqueda_aula_equipo(Connection conexion) throws SQLException{
@@ -1306,9 +1356,10 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getInt("id_equipo")+ "\n"+
-                    rs.getInt("cantidad")+ "\n" +
-                    rs.getString("id_aula"));
+            System.out.println("id_equipo" + "      " + "id_aula" + "      "+ "cantidad" + "\n" +rs.getInt("id_equipo")+
+                    "             " +        rs.getString("id_aula")+
+                    "           " +        rs.getInt("cantidad")+
+                    "\n");
         }
     }
     public static void busqueda_equipo(Connection conexion) throws SQLException{
@@ -1316,10 +1367,11 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getString("nombre")+ "\n"+
-                    rs.getInt("id_equipo")+ "\n" +
-                    rs.getInt("id_categoria")+ "\n" +
-                    rs.getString("descripcion"));
+            System.out.println("id_equipo"+ "   " + "id_categoria" + "        " + "nombre" + "        " + "descripcion" + "\n" +rs.getInt("id_equipo")+
+                    "          " + rs.getInt("id_categoria")+
+                    "                  " +rs.getString("nombre")+
+                    "            "   + rs.getString("descripcion")+
+                    "\n");
         }
     }
     public static void busqueda_categorias_equipo(Connection conexion) throws SQLException{
@@ -1327,9 +1379,10 @@ public class App {
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
         while (rs.next()) {
-            System.out.println(rs.getInt("id_categorias")+ "\n"+
-                    rs.getString("nombre")+ "\n" +
-                    rs.getString("descripcion"));
+            System.out.println("id_categoria" + "      " + "nombre" + "      "+ "descripcion" + "\n" +rs.getInt("id_categoria")+
+                    "                " +        rs.getString("nombre")+
+                    "          " +        rs.getString("descripcion")+
+                    "\n");
         }
     }
     public static void conexionBD(String ruta, String usuario, String contrasena){
