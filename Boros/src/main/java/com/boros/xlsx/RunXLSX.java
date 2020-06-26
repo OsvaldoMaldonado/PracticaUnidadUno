@@ -265,7 +265,12 @@ public class RunXLSX {
                 System.out.println("Tipo de dato Incorrecto dentro del excel");
             }catch (NumberFormatException e){
 
-            }finally{
+            }catch (StringIndexOutOfBoundsException e){
+
+            }catch (NullPointerException e){
+
+            }
+            finally{
                 try{
                     if( null != fr ){
                         fr.close();

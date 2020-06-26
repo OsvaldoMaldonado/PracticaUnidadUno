@@ -46,10 +46,11 @@ public class RunRutas {
             Main.contrasenia = contrasenia;
             Main.rutaTXT = rutaTXT;
             Main.rutaXLSX = rutaXLSX;
+
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Aurchivo No Encontrado");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al Leer el achivo");
         }
         return rutaR;
     }

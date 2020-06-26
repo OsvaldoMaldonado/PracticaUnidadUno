@@ -443,7 +443,10 @@ public class RunTXT {
                 System.out.println("No se Encontro el Archivo");
             } catch (IOException e) {
                 e.printStackTrace();
-            } finally{
+            }catch (NullPointerException e){
+
+            }
+            finally{
                 try {
                     if (null != fr) {
                         fr.close();
