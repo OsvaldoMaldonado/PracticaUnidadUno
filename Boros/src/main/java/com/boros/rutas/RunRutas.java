@@ -44,8 +44,6 @@ public class RunRutas {
             }
             Main.usuario = usuario;
             Main.contrasenia = contrasenia;
-            System.out.println(usuario);
-            System.out.println(contrasenia);
             Main.rutaTXT = rutaTXT;
             Main.rutaXLSX = rutaXLSX;
         } catch (FileNotFoundException e) {
