@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 
 public class Conexion {
 
-    Connection conect = null;
 
-    public Connection conexion(){
+    public static Connection conexion(){
+        Connection conect = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conect = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/horarios","root","");

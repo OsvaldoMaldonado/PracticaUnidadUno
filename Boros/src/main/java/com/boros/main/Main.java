@@ -5,6 +5,7 @@ import com.boros.xlsx.*;
 import com.boros.txt.*;
 import com.boros.rutas.*;
 import com.boros.sqlite.*;
+import com.mysql.jdbc.Connection;
 
 import java.sql.SQLException;
 
@@ -22,17 +23,22 @@ public class Main {
         RunRutas.cambioRuta();
         System.out.println("---- Lectura de TXT ----");
         RunTXT.lecturaTXT(rutaTXT);
+        System.out.println("");
         System.out.println("---- Lectura XLSX ----");
         System.out.println("");
         RunXLSX.lecturaXLSX(rutaXLSX);
         System.out.println("");
-        System.out.println("---- CRUD de MySQL ----");
-        try {
-            RunDB.baseDeDatos();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        Connection connect = Conexion.conexion();
+        if(connect != null){
+            System.out.println("---- CRUD de MySQL ----");
+            try {
+                RunDB.baseDeDatos();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }else{
+            System.out.println("No se pudo realizar el CRUD de MySQL debido a un fallo en la conexion");
         }
-
 
     }
 

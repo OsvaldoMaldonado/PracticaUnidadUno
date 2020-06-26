@@ -14,6 +14,7 @@ public class CRUD {
 
             String query = "";
             Conexion bd = new Conexion();
+
             Statement sentencia = (Statement) bd.conexion().createStatement();
             if (numero == 1){
                 query = "INSERT INTO aulas(id_aula, nombre, tipo, capacidad) VALUES ('" + dato1 + "', '" + dato2 + "', '" + dato3 + "', '" + dato4 + "');";
@@ -65,7 +66,6 @@ public class CRUD {
                         "VALUES ('" + dato1 + "', '" + dato2 + "', '" + dato3 + "', '"+dato4+"', '"+dato5+"');";
 
             }
-
 
             if (sentencia.executeUpdate(query) > 0) {
                 System.out.println("El registro se insertó exitosamente.");

@@ -456,7 +456,6 @@ public class RunTXT {
 
         String tabla="", dato1="", dato2="", dato3="", dato4="", dato5="", dato6="", dato7="", dato8="";
         int numero, numero1, numero2, numero3;
-        System.out.println(aulas.size());
         switch (carga){
             case 1:
                 for (int i = 0; i < aulas.size(); i++){
