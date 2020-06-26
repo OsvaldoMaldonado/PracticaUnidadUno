@@ -17,6 +17,7 @@ public class RunTXT {
         Scanner c = new Scanner(System.in);
         String ruta_archivo;
         String terminar = "Si";
+        int carga = 3;
 
         ArrayList<Aula_Equipo> aula_equipo = new ArrayList<>();
         ArrayList<Aulas> aulas = new ArrayList<>();
@@ -434,8 +435,12 @@ public class RunTXT {
                     }
                 }
                 System.out.println("*Lectura Realizada*");
+                System.out.println("¿Que desea hacer?");
+                System.out.println("1.- Cargar Base de Datos");
+                System.out.println("2.- Cargar Base de Datos Temporal");
+                carga = c.nextInt();
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                System.out.println("No se Encontro el Archivo");
             } catch (IOException e) {
                 e.printStackTrace();
             } finally{
@@ -448,11 +453,8 @@ public class RunTXT {
                 }
             }
 
-        int carga;
-        System.out.println("¿Que desea hacer?");
-        System.out.println("1.- Cargar Base de Datos");
-        System.out.println("2.- Cargar Base de Datos Temporal");
-        carga = c.nextInt();
+
+
 
         String tabla="", dato1="", dato2="", dato3="", dato4="", dato5="", dato6="", dato7="", dato8="";
         int numero, numero1, numero2, numero3;
@@ -677,6 +679,8 @@ public class RunTXT {
                     dato5 = usuarios.get(i).getContrato();
                     SQLite.insercion_usuarios(dato1, numero, dato3, dato4, dato5, SQLite.creacion_volatil());
                 }
+                break;
+            case 3:
                 break;
         }
 

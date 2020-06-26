@@ -18,6 +18,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
 
+
         System.out.println("---- Lectura de Rutas ----");
         System.out.println("");
         RunRutas.cambioRuta();
